@@ -1,0 +1,61 @@
+//IMPORTS
+@import "./global.less";
+//------
+body{
+  background-color: @g-backcolor;
+}
+//grid
+#l-container{
+  display: grid;
+  grid-template-columns:40% 60%;
+  grid-template-rows: 50vh 47vh 3vh;
+  grid-template-areas: "top mid"
+                       "top mid"
+                       "bottom bottom";
+
+}
+
+#l-wrapper-top{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-area: top;
+}
+#l-wrapper-mid{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  grid-area: mid;
+}
+#l-wrapper-bottom{
+  display: flex;
+  justify-content: center;
+  grid-area: bottom;
+}
+//mid
+.main-menu{
+  margin-bottom: 100px;
+}
+.menu-list{
+  display: flex;
+  flex-direction: column;
+
+}
+#main-title{
+  text-align: center;
+  color: @g-fontcolor;
+  font-size: @bigfont+2px;
+}
+.menu-btn{
+  text-align: center;
+  border: 1px solid white;
+  border-radius: 60px;
+  padding: 3px 10px 3px 10px;
+}
+.menu-link{
+  text-decoration: none;
+  text-align: center;
+  color: @g-fontcolor;
+  font-size: @mediumfont;
+}
