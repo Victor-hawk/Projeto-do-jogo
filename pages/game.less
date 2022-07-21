@@ -1,0 +1,147 @@
+@import "../global.less";
+@import "../assets/styles/state/answer.less";
+//VARIAVEIS
+@marginleft:10px;
+
+//Para manipulaçao javaScript.
+//PERGUNTA
+#js-ask-text{}
+//RESPOSTAS
+#js-lifebar-1 {}
+#js-lifebar-2 {}
+#js-lifebar-3 {}
+//PONTOS
+#js-score-points{}
+#js-barprogress{
+height: 100%;
+width:100%;
+background-color: yellow;
+}
+//-----------------
+//BASE
+.l-game{
+    background-color: @g-backcolor;
+    display:grid;
+    grid-template-rows:10vh 84vh 5vh 1vh ;
+    grid-template-columns:100%;
+    grid-template-areas: "top"
+                         "mid"
+                         "bottom"
+                         "clock";
+}
+.l-gametop{
+    display:flex;
+    justify-items: center;
+    align-items: center;
+    grid-area: top;
+}
+.l-gamemid{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    grid-area:mid;
+}
+.l-gamebottom{
+    display: flex;
+    align-items: center;
+    grid-area:bottom;
+}
+
+
+//
+.menuback{
+    text-decoration: none;
+    position: absolute;
+    padding-left:@marginleft;
+    font-size:@smallfont;
+    color:white;
+}
+
+.lifebar{
+    width:100%;
+}
+.lifebar-container{
+    width:100%;
+    display: inline-flex;
+    justify-content: center;
+}
+
+
+.lifebar-img{
+    width:33px;
+}
+
+
+
+/*------------*/
+
+/*mid*/
+//MODULES
+
+.ask{
+  font-size: @bigfont;
+  color:white;
+  text-align: center;
+}
+
+
+.answers{
+  max-width: 100vh;
+  max-height: 100vh;
+}
+.answers-container{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+
+}
+.answer{
+  color:white;
+  max-width:100%;
+  max-height:100%;
+  margin:4px;
+  padding:4px;
+  }
+.answer-circle{
+  display: inline-flex;
+  width:15px;
+  height:15px;
+  padding:5px;
+  border-radius:100%;
+  font-size: 1.3em;
+  border:1px solid white;
+  margin-right: 10px;
+}
+.circle-text{
+  align-self: center;
+  text-align: center;
+}
+.answer-text{
+  display:inline-flex;
+  font-size: @mediumfont;
+}
+
+
+
+/*------------*/
+
+/*bottom*/
+.score{
+  margin-left: @marginleft;
+  font-size:@smallfont;
+  color:white;
+
+}
+.score-text{}
+/*------------*/
+
+/*clockBar*/
+
+.l-gametime{
+    grid-area:clock;
+}
+
+
+/*------------*/
