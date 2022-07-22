@@ -1,0 +1,40 @@
+@import "../global.less";
+body{
+  background-color: @g-backcolor;
+}
+.l-container{
+  display: grid;
+  grid-template-columns:100%;
+  grid-template-rows: 15vh 82vh 3vh;
+  grid-template-areas: "top"
+                       "mid"
+                       "bottom";
+}
+
+.l-top{
+  grid-area: top;
+}
+.l-mid{
+  grid-area: mid;
+  display: flex;
+  justify-content: center;
+  color: @g-fontcolor;
+}
+  .l-btom{
+    grid-area: bottom;
+  }
+  .title-back{
+  text-decoration: none;
+  color: @g-fontcolor;
+  font-size: @bigfont+2px;
+  }
+  .text{
+  font-size: @mediumfont;
+  }
+
+  .top-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
