@@ -1,17 +1,18 @@
 //IMPORTS
-@import "./global.less";
+@import "../../global.less";
 //------
 body{
   background-color: @g-backcolor;
+  overflow: hidden;
+  font-family: pixel, sans-serif;
 }
 //grid
 #l-container{
   display: grid;
-  grid-template-columns:50% 50%;
-  grid-template-rows: 50vh 47vh 3vh;
+  grid-template-columns:40% 60%;
+  grid-template-rows: 50vh 50vh;
   grid-template-areas: "top mid"
-                       "top mid"
-                       "bottom bottom";
+                       "top mid";
 
 }
 
@@ -27,36 +28,42 @@ body{
   align-items: center;
   flex-direction: column;
   grid-area: mid;
+
 }
-#l-btom{
-  display: flex;
-  justify-content: center;
-  grid-area: bottom;
-  background-color: green;
-}
+
 //mid
 #title{
   overflow: auto;
   text-align: center;
   color: @g-fontcolor;
-  font-size: @bigfont+2px;
+  font-size: @bigfont+3rem;
 
-  @media(max-width:600px){
-    font-size: @bigfont+1;
+  @media(max-width:1000px){
+    font-size: @bigfont+2rem;
+  }
+  @media(max-width:440px){
+    font-size: @bigfont+1rem;
   }
 }
 .container-title{
 
 }
 .image{
-
-  @media(max-width:500px){
+animation: bouncealien 2s infinite alternate;
+  @media(max-width:600px){
     width: 100%;
   }
   @media(min-width: 1200px){
-    width: 70%;
+    width: 75%;
   }
-width: 70%;
+  @keyframes bouncealien {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-20px);
+  }
+}
 }
 .image-src{
 width: 100%;
@@ -81,21 +88,19 @@ width: 100%;
   border: 1px solid white;
   border-radius: 60px;
   width: 100%;
+  padding:5px 0px;
   text-decoration: none;
+}
+.menu-btn:hover{
+  .gborder();
 
 }
-.btn-link{
+
+.btn-text{
   text-align: center;
   color: @g-fontcolor;
   font-size: @mediumfont;
-}
-.version{
-  display: flex;
-  justify-content: flex-end;
-}
-#version-text{
-  display: none;
-  color: @g-fontcolor;
-  font-size: @smallfont;
-  text-align: center;
+  @media(min-width:1000px){
+    font-size: @mediumfont+0.6rem;
+  }
 }
