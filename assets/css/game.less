@@ -5,20 +5,20 @@
 
 //Para manipulaçao javaScript.
 //PERGUNTA
-#js-ask-text{}
+//#js-ask-text{}
 //RESPOSTAS
-#js-answer-a{}
-#js-answer-b{}
-#js-answer-c{}
-#js-answer-d{}
-#js-answer-e{}
+//#js-answer-a{}
+//#js-answer-b{}
+//#js-answer-c{}
+//#js-answer-d{}
+//#js-answer-e{}
 
 //VIDA
-#js-lifebar-1 {}
-#js-lifebar-2 {}
-#js-lifebar-3 {}
+//#js-lifebar-1 {}
+//#js-lifebar-2 {}
+//#js-lifebar-3 {}
 //PONTOS
-#js-score-points{}
+//#js-score-points{}
 //BARRA DE TEMPO AMARELA
 #js-barprogress{
 height: 100%;
@@ -35,6 +35,8 @@ body{
 .l-game{
     background-color: @g-backcolor;
     display:grid;
+    position: relative;
+    z-index: 3;
     grid-template-rows:10vh 84vh 5vh 1vh ;
     grid-template-columns:100%;
     grid-template-areas: "top"

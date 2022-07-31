@@ -7,14 +7,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../assets/less/base/reset.css">
     <link rel="stylesheet/less" type="text/css" href="../assets/css/game.less" />
-
+        <link rel="stylesheet/less" type="text/css" href="../assets/css/gameover.less" />
     <body>
         <title>Tela do Jogo</title>
     </head>
 
     <body>
-
+        <main class="over-container">
+            <section class="over-flex">
+                <h1 class="over-title">
+                    Game Over
+                </h1>
+                <a class="over-continue" href="game.html">
+                    Retry
+                </a>
+                <a class="over-menu" href="../main.html">
+                    Menu
+                </a>
+            </section>
+        </main>
         <main class="l-game">
+
             <section class="l-gametop">
                 <a class="menuback" href="../main.html">
                     MENU
@@ -42,7 +55,7 @@
                 </span>
                 <div class="answers-container">
                     <div class="answers">
-                        <div class="answer">
+                        <div class="answer id="answer-a">
                             <span class="answer-circle">
                                 <p class="circle-text">
                                     A
@@ -52,7 +65,7 @@
                                 Css
                             </h2>
                         </div>
-                        <div class="answer">
+                        <div class="answer" id="answer-b">
                             <span class="answer-circle">
                                 <p class="circle-text">
                                     B
@@ -63,7 +76,7 @@
                             </h2>
 
                         </div>
-                        <div class="answer">
+                        <div class="answer" id="answer-c">
                             <span class="answer-circle">
 
                                 <p class="circle-text">
@@ -75,7 +88,7 @@
                                 Javascript
                             </h2>
                         </div>
-                        <div class="answer">
+                        <div class="answer" id="answer-d">
                             <span class="answer-circle">
                                 <p class="circle-text">
                                     D
@@ -85,7 +98,7 @@
                                 Php
                             </h2>
                         </div>
-                        <div class="answer">
+                        <div class="answer" id="answer-e">
                             <span class="answer-circle">
                                 <p class="circle-text">
                                     E
@@ -104,7 +117,7 @@
                             </span>
                             <span id="js-score-points">
                                 <!--Usar javaScript para alterar valores dinamicamente-->
-                                0
+
                             </span>
                         </div>
                         <div class="">

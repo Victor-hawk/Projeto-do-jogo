@@ -36,13 +36,13 @@ body{
   overflow: auto;
   text-align: center;
   color: @g-fontcolor;
-  font-size: @bigfont+3rem;
+  font-size: @bigfont;
 
-  @media(max-width:1000px){
-    font-size: @bigfont+2rem;
+  @media(min-width:1000px){
+    font-size: @bigfont+1.5rem;
   }
-  @media(max-width:440px){
-    font-size: @bigfont+1rem;
+  @media(max-width:600px){
+    font-size: @bigfont;
   }
 }
 .container-title{
@@ -102,5 +102,8 @@ width: 100%;
   font-size: @mediumfont;
   @media(min-width:1000px){
     font-size: @mediumfont+0.6rem;
+  }
+  @media(max-width:400px){
+    font-size: @smallfont+0.1rem;
   }
 }

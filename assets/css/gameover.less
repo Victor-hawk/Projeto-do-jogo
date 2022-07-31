@@ -1,0 +1,48 @@
+@import "../../global.less";
+
+.over-container{
+    display: flex;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+
+    height: 100%;
+    background-color: @g-backcolor;
+    width: 100%;
+     font-family: pixel, sans-serif;
+}
+.over-flex{
+display: grid;
+grid-template-columns: 1;
+grid-template-rows: 3;
+grid-gap: 20px;
+}
+.over-title{
+    text-align: center;
+    font-size: @bigfont+2rem;
+    color: @g-fontcolor;
+
+}
+.over-menu{
+    text-align: center;
+    font-size: @mediumfont;
+    color: @g-fontcolor;
+    text-decoration:none;
+
+}
+.over-menu:hover{
+    .gborder();
+
+}
+.over-continue{
+    text-align: center;
+    font-size: @mediumfont;
+    color: @g-fontcolor;
+    text-decoration:none;
+
+}
+.over-continue:hover{
+    .gborder();
+
+}
