@@ -1,40 +1,13 @@
 @import "../../global.less";
-
-body{
-.basic_body_struct();
-
+@import "struct.less";
+.struct-flex{
+    align-items: baseline;
+    flex-direction: column;
 }
-.l-container{
-display: grid;
-grid-template-columns:100%;
-grid-template-rows: 15vh 82vh 3vh;
-grid-template-areas: "top"
-                   "mid"
-                   "bottom";
+.struct-text:hover{
+    background-color: black;
+    cursor:default;
 }
-
-.l-top{
-grid-area: top;
-}
-.l-mid{
-grid-area: mid;
-display: flex;
-justify-content: center;
-
-color: @g-fontcolor;
-}
-.l-btom{
-grid-area: bottom;
-}
-.title-back{
-//struct
-  .basic_title_struct();
-}
-.text{
-font-size: @mediumfont;
-}
-
-.top-container{
-.basic_container_struct();
-
+.struct-title{
+    .animation-bliking
 }

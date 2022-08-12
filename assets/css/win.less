@@ -1,6 +1,25 @@
-//------
+//imports
 @import "../../global.less";
-@import "gameover.less";
-.over-title{
-    font-size: @mediumfont+1.5rem;
+@import "struct.less";
+//customs
+.struct-container{
+    justify-content: center;
+}
+.struct-flex{
+//struct
+    flex-direction: column;
+    .basic_container_struct();
+}
+.struct-title{
+    font-size: @bigfont+0.5rem;
+    display: inline;
+    .animation-bliking
+}
+.struct-text{
+    font-size: @mediumfont+0.5rem;
+    display: inline;
+}
+.struct-text:hover{
+    background-color: black;
+    cursor:default;
 }
