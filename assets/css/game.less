@@ -1,0 +1,134 @@
+@import "../../global.less";//VARIAVEIS GLOBAIS
+
+//VARIAVEIS DO ARQUIVO
+@marginleft:10px;
+
+//js
+#js-barprogress{
+height:100%;
+width:0%;
+background-color: yellow;
+}
+//-----------------
+body{
+    background-color: @g-backcolor;
+    font-family: pixel, sans-serif;
+}
+//------------
+//layouts
+.l-game{
+    background-color: @g-backcolor;
+    display:grid;
+    position: relative;
+    grid-template-rows:10vh 84vh 5vh 1vh ;
+    grid-template-columns:100%;
+    grid-template-areas: "top"
+                         "mid"
+                         "bottom"
+                         "clock";
+}
+.l-gametop{
+    display:flex;
+    justify-items: center;
+    align-items: center;
+    grid-area: top;
+}
+.l-gamemid{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    grid-area:mid;
+}
+.l-gamebottom{
+    display: flex;
+    align-items: center;
+    grid-area:bottom;
+}
+//grid de cima
+.menuback{
+    text-decoration: none;
+    position: absolute;
+    padding-left:@marginleft;
+    font-size:@smallfont;
+    color:white;
+}
+.lifebar{
+    width:100%;
+}
+.lifebar-container{
+    width:100%;
+    display: inline-flex;
+    justify-content: center;
+}
+.lifebar-img{
+    width:33px;
+}
+//------------
+//grid do meio
+//MODULES
+.ask{
+  font-size: @bigfont;
+  color:white;
+  text-align: center;
+  @media screen and(min-width: 1024px){
+    font-size: @bigfont+1.5rem;
+  }
+}
+.answers-container{
+width: 100%;
+display: flex;
+justify-content: center;
+}
+.answers{
+  display: flex;
+  flex-direction: column;
+
+}
+.answer{
+  color:white;
+  margin:4px;
+  padding:4px;
+  border-radius: 30px;
+  }
+  .answer:hover{
+    .gborder();
+  }
+.answer-circle{
+  display: inline-flex;
+  width:15px;
+  height:15px;
+  padding:5px;
+  border-radius:100%;
+  font-size: 1.3em;
+  border:1px solid white;
+  margin-right: 10px;
+}
+.circle-text{
+  align-self: center;
+  text-align: center;
+}
+.answer-text{
+  display:inline-flex;
+  font-size: @mediumfont;
+  @media screen and(min-width: 1024px){
+    font-size: @mediumfont+ 0.3rem;
+  }
+}
+//------------
+//grid de baixo
+.score{
+  margin-left: @marginleft;
+  font-size:@smallfont;
+  color:white;
+  .animation-bliking
+}
+.score-text{
+
+}
+//------------
+//clockBar
+.l-gametime{
+    grid-area:clock;
+}
+//------------

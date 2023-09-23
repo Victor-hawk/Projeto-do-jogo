@@ -1,0 +1,38 @@
+@import "../../global.less";
+
+body{
+.basic_body_struct();
+}
+.struct-container{
+//struct
+    .basic_container_struct();
+    align-items: center;
+}
+
+.struct-flex{
+//struct
+    .basic_flex_struct();
+}
+
+.struct-title{
+//struct
+    .basic_title_struct();
+}
+
+.struct-text{
+//struct
+    .basic_menu_struct();
+}
+
+.struct-text:hover{
+//mixin
+    .gborder();
+}
+
+.struct-text{
+    text-align: center;
+    font-size: @mediumfont;
+    color: @g-fontcolor;
+    text-decoration:none;
+
+}
